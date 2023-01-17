@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="947.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller">
+   <children>
+      <VBox layoutX="-1.0" layoutY="-1.0" prefHeight="518.0" prefWidth="217.0" style="-fx-background-color: #EBE8F9;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="117.0" fitWidth="217.0" pickOnBounds="true" preserveRatio="true" />
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" style="-fx-background-color: #EBE8F9;" text="Dashborde">
+               <graphic>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" style="-fx-background-color: #EBE8F9;" text="Centres">
+               <graphic>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" style="-fx-background-color: #EBE8F9;" text="Reservation">
+               <graphic>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" style="-fx-background-color: #EBE8F9;" text="Clients">
+               <graphic>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="217.0" style="-fx-background-color: #EBE8F9;" text="Comptes">
+               <graphic>
+               </graphic>
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="275.0" layoutY="36.0" text="Listes Clients">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="250.0" layoutY="106.0" prefHeight="39.0" prefWidth="672.0" style="-fx-background-color: #F3F3F3;">
+         <children>
+            <Label alignment="CENTER" text="CIN">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Nom">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Prenom">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Email">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Tel">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Adres">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="33.0" text="Status">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <VBox fx:id="pnItem" layoutX="250.0" layoutY="164.0" prefHeight="271.0" prefWidth="672.0" />
+   </children>
+</AnchorPane>
