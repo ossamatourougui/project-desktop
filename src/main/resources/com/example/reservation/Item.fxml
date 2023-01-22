@@ -5,42 +5,41 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 
-
 <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label text="UC1341">
          <HBox.margin>
-            <Insets left="60.0" />
+            <Insets left="35.0" />
          </HBox.margin>
       </Label>
-      <Label text="ourugui">
+      <Label text="Tourugui">
          <HBox.margin>
-            <Insets left="60.0" />
+            <Insets left="35.0" />
          </HBox.margin>
       </Label>
       <Label text="Ossama">
          <HBox.margin>
-            <Insets left="60.0" />
+            <Insets left="35.0" />
          </HBox.margin>
       </Label>
       <Label text="o@gamil.com">
          <HBox.margin>
-            <Insets left="60.0" />
+            <Insets left="35.0" />
          </HBox.margin>
       </Label>
       <Label text="0639395305">
          <HBox.margin>
-            <Insets left="60.0" />
+            <Insets left="35.0" />
          </HBox.margin>
       </Label>
       <Label text="Avhasalam">
          <HBox.margin>
-            <Insets left="60.0" />
+            <Insets left="35.0" />
          </HBox.margin>
       </Label>
-      <Button mnemonicParsing="false" style="-fx-background-color: #fff; -fx-border-color: blue; -fx-border-radius: 20;" text="Supprimer">
+      <Button mnemonicParsing="false" style="-fx-background-color: #EBE8F9; -fx-border-color: #fff; -fx-border-radius: 15;" text="Supprimer">
          <HBox.margin>
-            <Insets left="60.0" />
+            <Insets left="35.0" />
          </HBox.margin>
       </Button>
    </children>

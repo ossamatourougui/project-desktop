@@ -26,9 +26,7 @@ public class HelloApplication extends Application {
             primarystage.setY(mouseEvent.getSceneY()-y);
         });
 
-
     }
-
     public static void main(String[] args) {
         launch();
     }
