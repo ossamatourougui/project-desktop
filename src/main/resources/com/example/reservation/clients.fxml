@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<Pane fx:id="panel" prefHeight="406.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox fx:id="pnt" alignment="CENTER_LEFT" layoutX="-4.0" layoutY="9.0" prefHeight="39.0" prefWidth="550.0" style="-fx-background-color: #F3F3F3;">
+         <children>
+            <Label alignment="CENTER" text="CIN">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Nom">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Prenom">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Email">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Tel">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Adres">
+               <HBox.margin>
+                  <Insets left="60.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane layoutY="48.0" prefHeight="319.0" prefWidth="672.0" style="-fx-background-insets: 0; -fx-background-color: #fff;">
+         <content>
+            <VBox fx:id="pnItem" prefHeight="319.0" prefWidth="672.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</Pane>
