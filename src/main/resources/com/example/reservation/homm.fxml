@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.Pane?>
 
 
-<Pane fx:id="panel" prefHeight="406.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="panel" prefHeight="406.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
       <Label layoutX="337.0" layoutY="173.0" text="dashbord" />
    </children>
