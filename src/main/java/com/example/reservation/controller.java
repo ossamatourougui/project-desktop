@@ -93,7 +93,7 @@ public class controller implements Initializable {
         data.put("try4", "suscessfully");
         //ApiFuture<WriteResult> future =firestore.collection("aacezc").document("czcez").set(data);
         System.out.println("Successfully");
-        filepath ="src\\main\\resources\\cheb.wav";
+        filepath ="src\\main\\resources\\sounds\\cheb.wav";
     }
     private void playmusic(String location) {
         try{
