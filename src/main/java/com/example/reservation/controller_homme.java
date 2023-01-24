@@ -16,10 +16,8 @@ import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -51,7 +49,7 @@ public class controller_homme implements Initializable {
         try {
             FXMLLoader fxmload = new FXMLLoader();
             fxmload.setLocation(getClass().getResource("loading_data.fxml"));
-            AnchorPane item = fxmload.load();
+            Pane item = fxmload.load();
             loading controllerItem = fxmload.getController();
             pnItem.getChildren().add(item);
 
@@ -116,7 +114,7 @@ public class controller_homme implements Initializable {
                     fxmload.setLocation(getClass().getResource("Item.fxml"));
                     HBox item = fxmload.load();
                     controller_item controllerItem = fxmload.getController();
-                    controllerItem.setData(list.get(i));
+                    controllerItem.setData(list.get(i) , "-fx-background-color : #EBE8F9;-fx-background-radius: 25;");
                     pnItem.getChildren().add(item);
                 }
             } catch (IOException e) {

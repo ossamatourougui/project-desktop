@@ -160,16 +160,16 @@ public class controller implements Initializable {
         }
     }
     public void mouse_click_changedbackground(int index){
-        btnCentre.setStyle("-fx-background-color :  #EBE8F9");
+        btnCentre.setStyle("-fx-background-color :  #EBE8F9;");
         btnClients.setStyle("-fx-background-color :  #EBE8F9");
         btnComptes.setStyle("-fx-background-color :  #EBE8F9");
         btnDachboard.setStyle("-fx-background-color :  #EBE8F9");
         btnReservation.setStyle("-fx-background-color : #EBE8F9");
-        if(index == 0)btnDachboard.setStyle("-fx-background-color : #000000;");
-        if(index == 1)btnCentre.setStyle("-fx-background-color : #000000;");
-        if(index == 2)btnReservation.setStyle("-fx-background-color : #000000;");
-        if(index == 3)btnClients.setStyle("-fx-background-color : #000000;");
-        if(index == 4)btnComptes.setStyle("-fx-background-color : #000000;");
+        if(index == 0)btnDachboard.setStyle("-fx-background-color : #c4c4c4;");
+        if(index == 1)btnCentre.setStyle("-fx-background-color : #c4c4c4;");
+        if(index == 2)btnReservation.setStyle("-fx-background-color : #c4c4c4;");
+        if(index == 3)btnClients.setStyle("-fx-background-color : #c4c4c4;");
+        if(index == 4)btnComptes.setStyle("-fx-background-color : #c4c4c4;");
 
     }
 }
