@@ -29,7 +29,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
-
 public class controller implements Initializable {
     @FXML
     public Button btnCentre;
@@ -53,23 +52,48 @@ public class controller implements Initializable {
     public Pane pnlStatus;
 
     @FXML
-    public Pane panel;
+    public VBox panel = null;
 
-    public VBox pnItem = null;
 
+    Firestore firestore;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         lblStatus.setText("Dachboard");
         try {
             panel.getChildren().add(FXMLLoader.load(getClass().getResource("homm.fxml")));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        //pnItem.getChildren().add(FXMLLoader.load(getClass().getResource("Item.fxml")));
+        FileInputStream serviceAccount = null;
+        try {
+            serviceAccount = new FileInputStream("./serviceaccountkey.json");
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        FirebaseOptions options = null;
+        try {
+            options = new FirebaseOptions.Builder().
+                    setCredentials(com.google.auth.oauth2.GoogleCredentials.fromStream(serviceAccount))
+                    .setDatabaseUrl("https://<reservationcentre>.firebaseio.com/")
+                    .build();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        FirebaseApp.initializeApp(options);
+        firestore = FirestoreClient.getFirestore();
+        Map<String ,Object> data = new HashMap<>();
+        data.put("try1", "faild");
+        data.put("try2", "suscessfully");
+        data.put("try3", "suscessfully");
+        data.put("try4", "suscessfully");
+        //ApiFuture<WriteResult> future =firestore.collection("aacezc").document("czcez").set(data);
+        System.out.println("Successfully");
     }
     public   void handelClick(ActionEvent event) throws IOException {
         if (event.getSource() == btnDachboard)
         {
+            mouse_click_changedbackground(0);
             lblStatus.setText("Dachboard");
             panel.getChildren().clear();
             try {
@@ -81,6 +105,7 @@ public class controller implements Initializable {
         }
         else  if (event.getSource() == btnCentre)
         {
+            mouse_click_changedbackground(1);
             lblStatus.setText("Centre");
             panel.getChildren().clear();
             try {
@@ -93,6 +118,7 @@ public class controller implements Initializable {
         }
         else  if (event.getSource() == btnReservation)
         {
+            mouse_click_changedbackground(2);
             lblStatus.setText("Reservation");
             panel.getChildren().clear();
             try {
@@ -104,10 +130,17 @@ public class controller implements Initializable {
         }
         else  if (event.getSource() == btnClients)
         {
+            mouse_click_changedbackground(3);
             lblStatus.setText("Clients");
             panel.getChildren().clear();
             try {
-                panel.getChildren().add(FXMLLoader.load(getClass().getResource("clients.fxml")));
+                FXMLLoader fxmload = new FXMLLoader();
+                fxmload.setLocation(getClass().getResource("clients.fxml"));
+                Pane item = fxmload.load();
+                controller_homme controllerItem = fxmload.getController();
+                controllerItem.setfirestore(firestore);
+                panel.getChildren().add(item);
+
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -115,6 +148,7 @@ public class controller implements Initializable {
         }
         else  if (event.getSource() == btnComptes)
         {
+            mouse_click_changedbackground(4);
             lblStatus.setText("Comptes");
             panel.getChildren().clear();
             try {
@@ -124,6 +158,19 @@ public class controller implements Initializable {
             }
 
         }
+    }
+    public void mouse_click_changedbackground(int index){
+        btnCentre.setStyle("-fx-background-color :  #EBE8F9");
+        btnClients.setStyle("-fx-background-color :  #EBE8F9");
+        btnComptes.setStyle("-fx-background-color :  #EBE8F9");
+        btnDachboard.setStyle("-fx-background-color :  #EBE8F9");
+        btnReservation.setStyle("-fx-background-color : #EBE8F9");
+        if(index == 0)btnDachboard.setStyle("-fx-background-color : #000000;");
+        if(index == 1)btnCentre.setStyle("-fx-background-color : #000000;");
+        if(index == 2)btnReservation.setStyle("-fx-background-color : #000000;");
+        if(index == 3)btnClients.setStyle("-fx-background-color : #000000;");
+        if(index == 4)btnComptes.setStyle("-fx-background-color : #000000;");
+
     }
 }
 

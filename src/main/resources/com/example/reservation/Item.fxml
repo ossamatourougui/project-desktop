@@ -5,41 +5,41 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<HBox fx:id="row" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_item">
    <children>
-      <Label text="UC1341">
+      <Label fx:id="txt_cin" maxWidth="60.0" minWidth="60.0" text="UC1341">
          <HBox.margin>
-            <Insets left="35.0" />
+            <Insets left="20.0" />
          </HBox.margin>
       </Label>
-      <Label text="Tourugui">
+      <Label fx:id="txt_nom" maxWidth="65.0" minWidth="65.0" text="Tourugui">
          <HBox.margin>
-            <Insets left="35.0" />
+            <Insets left="10.0" />
          </HBox.margin>
       </Label>
-      <Label text="Ossama">
+      <Label fx:id="txt_prenom" maxWidth="65.0" minWidth="65.0" text="Ossama">
          <HBox.margin>
-            <Insets left="35.0" />
+            <Insets left="20.0" />
          </HBox.margin>
       </Label>
-      <Label text="o@gamil.com">
+      <Label fx:id="txt_email" maxWidth="120.0" minWidth="120.0" text="o@gamil.com">
          <HBox.margin>
-            <Insets left="35.0" />
+            <Insets left="20.0" />
          </HBox.margin>
       </Label>
-      <Label text="0639395305">
+      <Label fx:id="txt_tele" maxWidth="70.0" minWidth="70.0" text="0639395305">
          <HBox.margin>
-            <Insets left="35.0" />
+            <Insets left="20.0" />
          </HBox.margin>
       </Label>
-      <Label text="Avhasalam">
+      <Label fx:id="txt_adress" maxWidth="100.0" minWidth="100.0" text="Avhasalam">
          <HBox.margin>
-            <Insets left="35.0" />
+            <Insets left="20.0" />
          </HBox.margin>
       </Label>
-      <Button mnemonicParsing="false" style="-fx-background-color: #EBE8F9; -fx-border-color: #fff; -fx-border-radius: 15;" text="Supprimer">
+      <Button fx:id="btn_supp" mnemonicParsing="false" onMouseClicked="#mouse_click" onMouseEntered="#mouse_in" onMouseExited="#mouse_out" style="-fx-border-radius: 15; -fx-border-color: #fff; -fx-background-color: #EBE8F9; -fx-border-color: #ffffff;" text="Supprimer">
          <HBox.margin>
-            <Insets left="35.0" />
+            <Insets left="20.0" />
          </HBox.margin>
       </Button>
    </children>
