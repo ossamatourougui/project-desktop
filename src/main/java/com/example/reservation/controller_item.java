@@ -30,20 +30,20 @@ public class controller_item implements Initializable {
     @FXML
     public HBox row;
 
-    public void setData(client c , String style) {
+    public void setData(client c) {
         txt_cin.setText(""+c.getCIN());
         txt_nom.setText(""+c.getNOM());
         txt_prenom.setText(""+c.getPrenom());
         txt_email.setText(""+c.getEmail());
         txt_tele.setText(""+c.getTel());
         txt_adress.setText(""+c.getAdress());
-        btn_supp.setStyle(style);
+        //row.setStyle("-fx-background-color : #BDBBC3");
     }
     public void mouse_in() {
-        btn_supp.setStyle("-fx-background-color : #F08080;-fx-background-radius: 25;");
+        btn_supp.setStyle("-fx-background-color : #F08080");
     }
     public void mouse_out() {
-        btn_supp.setStyle("-fx-background-color : #EBE8F9;-fx-background-radius: 25;");
+        btn_supp.setStyle("-fx-background-color : #EBE8F9");
     }
 
     public void mouse_click() {

@@ -45,7 +45,6 @@ public class controller_homme implements Initializable {
     client c;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        c = new client("null", "null","null", "null", "null", "null");
         try {
             FXMLLoader fxmload = new FXMLLoader();
             fxmload.setLocation(getClass().getResource("loading_data.fxml"));
@@ -72,7 +71,7 @@ public class controller_homme implements Initializable {
         }).start();
     }
     public void click_refrech(){
-        //put_data_intable();
+        put_data_intable();
     }
     public void load_data(){
         firestore.collection("clients").addSnapshotListener(new EventListener<QuerySnapshot>() {
@@ -88,6 +87,7 @@ public class controller_homme implements Initializable {
                     c.setEmail(item.getString("Email"));
                     c.setTel(item.getString("tel"));
                     c.setAdress(item.getString("Adress"));
+                    c.setImage(item.getString("ref"));
                     list.add(c);
                 }
                 System.out.println("list :"+list.size());
