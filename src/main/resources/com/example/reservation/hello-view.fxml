@@ -115,9 +115,6 @@
             </Label>
          </children>
       </Pane>
-      <Pane fx:id="panel" layoutX="217.0" layoutY="93.0" prefHeight="425.0" prefWidth="730.0">
-
-
-      </Pane>
+      <VBox fx:id="panel" layoutX="217.0" layoutY="93.0" prefHeight="425.0" prefWidth="730.0" />
    </children>
 </AnchorPane>
