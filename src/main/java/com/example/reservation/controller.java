@@ -179,7 +179,12 @@ public class controller implements Initializable {
             lblStatus.setText("Comptes");
             panel.getChildren().clear();
             try {
-                panel.getChildren().add(FXMLLoader.load(getClass().getResource("comptes.fxml")));
+                FXMLLoader fxmload = new FXMLLoader();
+                fxmload.setLocation(getClass().getResource("comptes.fxml"));
+                Pane item = fxmload.load();
+                controller_comptes controllerItem = fxmload.getController();
+                controllerItem.setfirestore(firestore);
+                panel.getChildren().add(item);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
