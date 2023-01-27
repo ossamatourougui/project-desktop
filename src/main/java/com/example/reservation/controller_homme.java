@@ -43,6 +43,7 @@ public class controller_homme implements Initializable {
     Firestore firestore = null;
     ArrayList<client> list = new ArrayList<>();
     client c;
+    Boolean check =true;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
@@ -58,10 +59,11 @@ public class controller_homme implements Initializable {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while (true){
-                    Platform.runLater(()->{
-                        put_data_intable();
-                    });
+                while (check){
+                        Platform.runLater(()->{
+                            put_data_intable();
+                        });
+                        if (list.size()!=0){System.out.println("finsh");break;}
                     try {
                         Thread.sleep(3000);
                     }catch (Exception e){System.out.println("error sleep Thear");}
@@ -75,7 +77,7 @@ public class controller_homme implements Initializable {
     }
     public void load_data(){
         firestore.collection("clients").addSnapshotListener(new EventListener<QuerySnapshot>() {
-            @Override
+                @Override
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirestoreException e) {
                 System.out.println("inside");
                 list.clear();

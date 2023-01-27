@@ -14,6 +14,9 @@ public class reservation {
         this.heureD = heureD;
         this.heureF = heureF;
     }
+    public reservation() {
+
+    }
 
     public String getCin() {
         return cin;
