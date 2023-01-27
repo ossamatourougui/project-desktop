@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 
-
-<Pane fx:id="panel" prefHeight="406.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+<Pane fx:id="panel" prefHeight="406.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_dashbord">
    <children>
-      <Label layoutX="337.0" layoutY="173.0" text="dashbord" />
+      <StackPane fx:id="stackpanel" layoutX="22.0" layoutY="20.0" prefHeight="150.0" prefWidth="200.0" />
    </children>
 </Pane>
