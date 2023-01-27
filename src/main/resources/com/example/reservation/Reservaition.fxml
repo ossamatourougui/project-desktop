@@ -11,11 +11,11 @@
 
 <Pane fx:id="panel" prefHeight="477.0" prefWidth="1027.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.contoller_reservation">
    <children>
-      <HBox fx:id="pnt" alignment="CENTER_LEFT" layoutX="281.0" layoutY="66.0" prefHeight="39.0" prefWidth="633.0" style="-fx-background-color: #F3F3F3;">
+      <HBox fx:id="pnt" alignment="CENTER_LEFT" layoutX="267.0" layoutY="61.0" prefHeight="39.0" prefWidth="557.0" style="-fx-background-color: #F3F3F3;">
          <children>
             <Label alignment="CENTER" text="CIN">
                <HBox.margin>
-                  <Insets left="20.0" />
+                  <Insets left="10.0" />
                </HBox.margin>
             </Label>
             <Label alignment="CENTER" text="Nom">
@@ -25,36 +25,36 @@
             </Label>
             <Label alignment="CENTER" text="Date">
                <HBox.margin>
-                  <Insets left="60.0" />
+                  <Insets left="74.0" />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" text="Heure Depart">
+            <Label alignment="CENTER" text="HD">
                <HBox.margin>
-                  <Insets left="60.0" />
+                  <Insets left="68.0" />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" text="Heure Fini">
+            <Label alignment="CENTER" text="HF">
                <HBox.margin>
-                  <Insets left="60.0" />
+                  <Insets left="40.0" />
                </HBox.margin>
             </Label>
          </children>
       </HBox>
-      <ScrollPane layoutX="4.0" layoutY="10.0" prefHeight="392.0" prefWidth="269.0" style="-fx-background-color: #ffffff;">
+      <ScrollPane layoutX="4.0" layoutY="10.0" prefHeight="392.0" prefWidth="257.0" style="-fx-background-color: #ffffff;">
          <content>
-            <VBox fx:id="panel_centre" prefHeight="390.0" prefWidth="267.0" style="-fx-background-color: #ffffff;" />
+            <VBox fx:id="panel_centre" prefHeight="385.0" prefWidth="251.0" style="-fx-background-color: #ffffff;" />
          </content>
       </ScrollPane>
-      <ScrollPane layoutX="281.0" layoutY="105.0" prefHeight="296.0" prefWidth="633.0" style="-fx-background-insets: 0; -fx-background-color: #fff;">
+      <ScrollPane layoutX="267.0" layoutY="105.0" prefHeight="296.0" prefWidth="557.0" style="-fx-background-insets: 0; -fx-background-color: #fff;">
          <content>
-            <VBox fx:id="panel_reservation" prefHeight="283.0" prefWidth="616.0" />
+            <VBox fx:id="panel_reservation" prefHeight="283.0" prefWidth="553.0" />
          </content>
       </ScrollPane>
-      <ImageView fitHeight="47.0" fitWidth="58.0" layoutX="298.0" layoutY="14.0" pickOnBounds="true">
+      <ImageView fitHeight="47.0" fitWidth="58.0" layoutX="267.0" layoutY="9.0" pickOnBounds="true">
          <image>
             <Image url="@../../../../../../../logocap.png" />
          </image>
       </ImageView>
-      <Label layoutX="370.0" layoutY="29.0" text="Name centre" />
+      <Label layoutX="338.0" layoutY="24.0" text="Name centre" />
    </children>
 </Pane>
