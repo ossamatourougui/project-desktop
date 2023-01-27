@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="panee" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseEntered="#mouse_in" onMouseExited="#mouse_out" prefHeight="106.0" prefWidth="223.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_centreitem">
+   <children>
+      <Rectangle fx:id="rec" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="83.0" layoutX="2.0" layoutY="12.0" onMouseEntered="#mouse_in" onMouseExited="#mouse_out" onMouseMoved="#mouse_in" stroke="BLACK" strokeType="INSIDE" width="220.0" />
+      <ImageView fx:id="image_centre" fitHeight="69.0" fitWidth="64.0" layoutX="7.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="abv_name_centre" layoutX="77.0" layoutY="20.0" text="CEFT">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="name_centre" layoutX="77.0" layoutY="46.0" prefHeight="31.0" prefWidth="139.0" text="Centre des etudes et des formation tiznit" />
+   </children>
+</Pane>

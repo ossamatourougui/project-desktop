@@ -43,9 +43,9 @@ public class controller_homme implements Initializable {
     Firestore firestore = null;
     ArrayList<client> list = new ArrayList<>();
     client c;
+    Boolean check =true;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        c = new client("null", "null","null", "null", "null", "null");
         try {
             FXMLLoader fxmload = new FXMLLoader();
             fxmload.setLocation(getClass().getResource("loading_data.fxml"));
@@ -59,10 +59,11 @@ public class controller_homme implements Initializable {
         new Thread(new Runnable() {
             @Override
             public void run() {
-                while (true){
-                    Platform.runLater(()->{
-                        put_data_intable();
-                    });
+                while (check){
+                        Platform.runLater(()->{
+                            put_data_intable();
+                        });
+                        if (list.size()!=0){System.out.println("finsh");break;}
                     try {
                         Thread.sleep(3000);
                     }catch (Exception e){System.out.println("error sleep Thear");}
@@ -72,11 +73,11 @@ public class controller_homme implements Initializable {
         }).start();
     }
     public void click_refrech(){
-        //put_data_intable();
+        put_data_intable();
     }
     public void load_data(){
         firestore.collection("clients").addSnapshotListener(new EventListener<QuerySnapshot>() {
-            @Override
+                @Override
             public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirestoreException e) {
                 System.out.println("inside");
                 list.clear();
@@ -88,6 +89,7 @@ public class controller_homme implements Initializable {
                     c.setEmail(item.getString("Email"));
                     c.setTel(item.getString("tel"));
                     c.setAdress(item.getString("Adress"));
+                    c.setImage(item.getString("ref"));
                     list.add(c);
                 }
                 System.out.println("list :"+list.size());

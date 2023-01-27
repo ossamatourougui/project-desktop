@@ -37,7 +37,7 @@
             <Insets left="20.0" />
          </HBox.margin>
       </Label>
-      <Button fx:id="btn_supp" mnemonicParsing="false" onMouseClicked="#mouse_click" onMouseEntered="#mouse_in" onMouseExited="#mouse_out" style="-fx-background-radius: 25; -fx-background-color: #EBE8F9;" text="Supprimer">
+      <Button fx:id="btn_supp" mnemonicParsing="false" onMouseClicked="#mouse_click" onMouseEntered="#mouse_in" onMouseExited="#mouse_out" style="-fx-border-radius: 15; -fx-border-color: #fff; -fx-background-color: #EBE8F9; -fx-border-color: #ffffff;" text="Supprimer">
          <HBox.margin>
             <Insets left="20.0" />
          </HBox.margin>

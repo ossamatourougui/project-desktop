@@ -19,8 +19,12 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
+import javax.sound.sampled.AudioInputStream;
 
 import javax.annotation.Nullable;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -54,7 +58,7 @@ public class controller implements Initializable {
     @FXML
     public VBox panel = null;
 
-
+    String filepath;
     Firestore firestore;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -89,10 +93,29 @@ public class controller implements Initializable {
         data.put("try4", "suscessfully");
         //ApiFuture<WriteResult> future =firestore.collection("aacezc").document("czcez").set(data);
         System.out.println("Successfully");
+        filepath ="src\\main\\resources\\sounds\\cheb.wav";
+    }
+    private void playmusic(String location) {
+        try{
+            File musicpath = new File(location);
+            if(musicpath.exists()){
+                AudioInputStream audio = AudioSystem.getAudioInputStream(musicpath);
+                Clip clip = AudioSystem.getClip();
+                clip.open(audio);
+                clip.start();
+            }
+            else{
+                System.err.println("not found");
+            }
+        }catch(Exception ex){
+            System.err.println(""+ex.getMessage());
+        }
+
     }
     public   void handelClick(ActionEvent event) throws IOException {
         if (event.getSource() == btnDachboard)
         {
+            playmusic(filepath);
             mouse_click_changedbackground(0);
             lblStatus.setText("Dachboard");
             panel.getChildren().clear();
@@ -105,6 +128,7 @@ public class controller implements Initializable {
         }
         else  if (event.getSource() == btnCentre)
         {
+            playmusic(filepath);
             mouse_click_changedbackground(1);
             lblStatus.setText("Centre");
             panel.getChildren().clear();
@@ -118,11 +142,17 @@ public class controller implements Initializable {
         }
         else  if (event.getSource() == btnReservation)
         {
+            playmusic(filepath);
             mouse_click_changedbackground(2);
             lblStatus.setText("Reservation");
             panel.getChildren().clear();
             try {
-                panel.getChildren().add(FXMLLoader.load(getClass().getResource("Reservaition.fxml")));
+                FXMLLoader fxmload = new FXMLLoader();
+                fxmload.setLocation(getClass().getResource("Reservaition.fxml"));
+                Pane item = fxmload.load();
+                contoller_reservation controllerItem = fxmload.getController();
+                controllerItem.setdata(firestore);
+                panel.getChildren().add(item);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -130,6 +160,7 @@ public class controller implements Initializable {
         }
         else  if (event.getSource() == btnClients)
         {
+            playmusic(filepath);
             mouse_click_changedbackground(3);
             lblStatus.setText("Clients");
             panel.getChildren().clear();
@@ -148,11 +179,17 @@ public class controller implements Initializable {
         }
         else  if (event.getSource() == btnComptes)
         {
+            playmusic(filepath);
             mouse_click_changedbackground(4);
             lblStatus.setText("Comptes");
             panel.getChildren().clear();
             try {
-                panel.getChildren().add(FXMLLoader.load(getClass().getResource("comptes.fxml")));
+                FXMLLoader fxmload = new FXMLLoader();
+                fxmload.setLocation(getClass().getResource("comptes.fxml"));
+                Pane item = fxmload.load();
+                controller_comptes controllerItem = fxmload.getController();
+                controllerItem.setfirestore(firestore);
+                panel.getChildren().add(item);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

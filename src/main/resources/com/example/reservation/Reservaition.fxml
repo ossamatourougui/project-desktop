@@ -1,11 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 
-
-<Pane fx:id="panel" prefHeight="406.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<Pane fx:id="panel" prefHeight="477.0" prefWidth="1027.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.contoller_reservation">
    <children>
-      <Label layoutX="344.0" layoutY="186.0" text="reservation" />
+      <HBox fx:id="pnt" alignment="CENTER_LEFT" layoutX="267.0" layoutY="61.0" prefHeight="39.0" prefWidth="557.0" style="-fx-background-color: #F3F3F3;">
+         <children>
+            <Label alignment="CENTER" text="CIN">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Nom">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="Date">
+               <HBox.margin>
+                  <Insets left="74.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="HD">
+               <HBox.margin>
+                  <Insets left="68.0" />
+               </HBox.margin>
+            </Label>
+            <Label alignment="CENTER" text="HF">
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <ScrollPane layoutX="4.0" layoutY="10.0" prefHeight="392.0" prefWidth="257.0" style="-fx-background-color: #ffffff;">
+         <content>
+            <VBox fx:id="panel_centre" prefHeight="385.0" prefWidth="251.0" style="-fx-background-color: #ffffff;" />
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="267.0" layoutY="105.0" prefHeight="296.0" prefWidth="557.0" style="-fx-background-insets: 0; -fx-background-color: #fff;">
+         <content>
+            <VBox fx:id="panel_reservation" prefHeight="283.0" prefWidth="553.0" />
+         </content>
+      </ScrollPane>
+      <ImageView fitHeight="47.0" fitWidth="58.0" layoutX="267.0" layoutY="9.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../../logocap.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="338.0" layoutY="24.0" text="Name centre" />
    </children>
 </Pane>

@@ -9,6 +9,7 @@ module com.example.reservation {
     requires com.google.auth;
     requires google.cloud.storage;
     requires jsr305;
+    requires java.desktop;
 
     opens com.example.reservation to javafx.fxml;
     exports com.example.reservation;

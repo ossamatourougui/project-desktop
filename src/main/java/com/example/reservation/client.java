@@ -3,6 +3,25 @@ package com.example.reservation;
 
 public class client {
     String CIN;
+    String Image;
+
+    public String getImage() {
+        return Image;
+    }
+
+    public void setImage(String image) {
+        Image = image;
+    }
+
+    public client(String CIN, String image, String email, String adress, String tel, String prenom, String NOM) {
+        this.CIN = CIN;
+        Image = image;
+        Email = email;
+        Adress = adress;
+        Tel = tel;
+        Prenom = prenom;
+        this.NOM = NOM;
+    }
 
     public String getCIN() {
         return CIN;
@@ -57,14 +76,6 @@ public class client {
     String Tel;
     String Prenom;
 
-    public client(String CIN, String email, String adress, String tel, String prenom, String NOM) {
-        this.CIN = CIN;
-        Email = email;
-        Adress = adress;
-        Tel = tel;
-        Prenom = prenom;
-        this.NOM = NOM;
-    }
     public client() {
 
     }

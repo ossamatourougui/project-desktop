@@ -7,13 +7,21 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane fx:id="panel" prefHeight="406.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_homme">
+<Pane fx:id="panel" prefHeight="429.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_homme">
    <children>
-      <HBox fx:id="pnt" alignment="CENTER_LEFT" layoutX="8.0" layoutY="6.0" prefHeight="39.0" prefWidth="716.0" style="-fx-background-color: #F3F3F3;">
+      <HBox fx:id="pnt" alignment="CENTER_LEFT" layoutX="8.0" layoutY="6.0" prefHeight="39.0" prefWidth="768.0" style="-fx-background-color: #F3F3F3;">
          <children>
+            <Label alignment="CENTER" text="Image">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
             <Label alignment="CENTER" text="CIN">
                <HBox.margin>
-                  <Insets left="18.0" />
+                  <Insets left="30.0" />
                </HBox.margin>
                <opaqueInsets>
                   <Insets />
@@ -51,9 +59,9 @@
             </Label>
          </children>
       </HBox>
-      <ScrollPane layoutX="7.0" layoutY="48.0" prefHeight="350.0" prefWidth="716.0" style="-fx-background-insets: 0; -fx-background-color: #fff;">
+      <ScrollPane layoutX="7.0" layoutY="48.0" prefHeight="350.0" prefWidth="768.0" style="-fx-background-insets: 0; -fx-background-color: #fff;">
          <content>
-            <VBox fx:id="pnItem" prefHeight="342.0" prefWidth="709.0" />
+            <VBox fx:id="pnItem" prefHeight="342.0" prefWidth="766.0" />
          </content>
       </ScrollPane>
    </children>
