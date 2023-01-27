@@ -10,6 +10,9 @@ public class centre {
         this.name = name;
         this.abwname = abwname;
     }
+    public centre() {
+
+    }
 
     public String getImage() {
         return image;

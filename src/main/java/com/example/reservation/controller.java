@@ -147,7 +147,12 @@ public class controller implements Initializable {
             lblStatus.setText("Reservation");
             panel.getChildren().clear();
             try {
-                panel.getChildren().add(FXMLLoader.load(getClass().getResource("Reservaition.fxml")));
+                FXMLLoader fxmload = new FXMLLoader();
+                fxmload.setLocation(getClass().getResource("Reservaition.fxml"));
+                Pane item = fxmload.load();
+                contoller_reservation controllerItem = fxmload.getController();
+                controllerItem.setdata(firestore);
+                panel.getChildren().add(item);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
