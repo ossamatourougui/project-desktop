@@ -1,16 +1,13 @@
 package com.example.reservation;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
-import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -35,7 +32,7 @@ public class controller_item implements Initializable {
     @FXML
     public ImageView img_client;
 
-    public void setData(client c) {
+    public void setData(client c, String s) {
         txt_cin.setText(""+c.getCIN());
         txt_nom.setText(""+c.getNOM());
         txt_prenom.setText(""+c.getPrenom());
@@ -59,6 +56,7 @@ public class controller_item implements Initializable {
         }
         img_client.setFitWidth(44);
         img_client.setFitHeight(33);
+        btn_supp.setStyle(s);
         //javafx.scene.shape.Rectangle clip = new javafx.scene.shape.Rectangle();
         //clip.setArcHeight(2);
         //clip.setArcWidth(2);

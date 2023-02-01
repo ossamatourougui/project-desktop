@@ -15,7 +15,7 @@ public class HelloApplication extends Application {
     public void start(Stage primarystage) throws Exception {
         Parent root =  FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         primarystage.setScene(new Scene(root));
-        //primarystage.initStyle(StageStyle.UNDECORATED);
+        //primarystage.initStyl5e(StageStyle.UNDECORATED);
         primarystage.setResizable(false);
         primarystage.setTitle("Reservation Centre");
         //Image img = new Image("./icons8-city-30.png");
