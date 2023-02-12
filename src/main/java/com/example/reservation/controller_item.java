@@ -1,16 +1,11 @@
 package com.example.reservation;
 
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
-import java.awt.*;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -32,43 +27,21 @@ public class controller_item implements Initializable {
 
     @FXML
     public HBox row;
-    @FXML
-    public ImageView img_client;
 
-    public void setData(client c) {
+    public void setData(client c, String s) {
         txt_cin.setText(""+c.getCIN());
         txt_nom.setText(""+c.getNOM());
         txt_prenom.setText(""+c.getPrenom());
         txt_email.setText(""+c.getEmail());
         txt_tele.setText(""+c.getTel());
         txt_adress.setText(""+c.getAdress());
-        Image image;
-        String url = c.getImage();
-        if(c.getImage()==null){
-            img_client.setImage(null);
-        }else {
-            try {
-                image = new Image(url);
-                img_client.setImage(image);
-
-            }catch (Exception ex){
-                img_client.setImage(null);
-                System.out.println("probleme importation image");
-            }
-
-        }
-        img_client.setFitWidth(44);
-        img_client.setFitHeight(33);
-        //javafx.scene.shape.Rectangle clip = new javafx.scene.shape.Rectangle();
-        //clip.setArcHeight(2);
-        //clip.setArcWidth(2);
-        //img_client.setClip(clip);
+        //row.setStyle("-fx-background-color : #BDBBC3");
     }
     public void mouse_in() {
-        btn_supp.setStyle("-fx-background-color : #F08080;-fx-background-radius:15");
+        btn_supp.setStyle("-fx-background-color : #F08080");
     }
     public void mouse_out() {
-        btn_supp.setStyle("-fx-background-color : #EBE8F9;-fx-background-radius:15");
+        btn_supp.setStyle("-fx-background-color : #EBE8F9");
     }
 
     public void mouse_click() {

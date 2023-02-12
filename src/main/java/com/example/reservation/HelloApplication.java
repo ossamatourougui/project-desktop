@@ -2,10 +2,8 @@ package com.example.reservation;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Dimension2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -15,11 +13,7 @@ public class HelloApplication extends Application {
     public void start(Stage primarystage) throws Exception {
         Parent root =  FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         primarystage.setScene(new Scene(root));
-        //primarystage.initStyle(StageStyle.UNDECORATED);
-        primarystage.setResizable(false);
-        primarystage.setTitle("Reservation Centre");
-        //Image img = new Image("./icons8-city-30.png");
-        //primarystage.getIcons().add(img);
+        primarystage.initStyle(StageStyle.UNDECORATED);
         primarystage.show();
 
         root.setOnMousePressed(mouseEvent -> {
