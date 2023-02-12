@@ -13,7 +13,6 @@ public class HelloApplication extends Application {
     public void start(Stage primarystage) throws Exception {
         Parent root =  FXMLLoader.load(getClass().getResource("hello-view.fxml"));
         primarystage.setScene(new Scene(root));
-        primarystage.initStyle(StageStyle.UNDECORATED);
         primarystage.show();
 
         root.setOnMousePressed(mouseEvent -> {

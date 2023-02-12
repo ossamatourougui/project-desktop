@@ -35,7 +35,6 @@ public class controller_item implements Initializable {
         txt_email.setText(""+c.getEmail());
         txt_tele.setText(""+c.getTel());
         txt_adress.setText(""+c.getAdress());
-        //row.setStyle("-fx-background-color : #BDBBC3");
     }
     public void mouse_in() {
         btn_supp.setStyle("-fx-background-color : #F08080");
