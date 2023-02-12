@@ -10,8 +10,10 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="panel" prefHeight="406.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_dashbord">
+
+<Pane fx:id="panel" prefHeight="406.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
+
       <HBox layoutX="1.0" layoutY="36.0" prefHeight="203.0" prefWidth="730.0" spacing="8.0">
          <children>
             <VBox prefHeight="203.0" prefWidth="385.0" styleClass="container" stylesheets="@style.css">
@@ -49,5 +51,7 @@
          </font>
       </Label>
       <HBox fx:id="hboxcontent" alignment="CENTER" layoutX="5.0" layoutY="277.0" prefHeight="115.0" prefWidth="722.0" spacing="20.0" styleClass="container" stylesheets="@style.css" />
-   </children>
+
+      <Label layoutX="337.0" layoutY="173.0" text="dashbord" />
+      </children>
 </Pane>

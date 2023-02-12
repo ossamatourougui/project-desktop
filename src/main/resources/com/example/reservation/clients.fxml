@@ -7,62 +7,44 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 
-<Pane fx:id="panel" prefHeight="429.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_homme">
+<Pane fx:id="panel" prefHeight="406.0" prefWidth="732.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_homme">
    <children>
-      <HBox fx:id="pnt" alignment="CENTER_LEFT" layoutX="8.0" layoutY="6.0" prefHeight="39.0" prefWidth="768.0" style="-fx-background-color: #F3F3F3;">
+      <HBox fx:id="pnt" alignment="CENTER_LEFT" layoutX="8.0" layoutY="6.0" prefHeight="39.0" prefWidth="716.0" style="-fx-background-color: #F3F3F3;">
          <children>
-            <Label alignment="CENTER" text="Image">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <HBox.margin>
-                  <Insets left="20.0" />
-               </HBox.margin>
-            </Label>
             <Label alignment="CENTER" text="CIN">
                <HBox.margin>
-                  <Insets left="30.0" />
+                  <Insets left="18.0" />
                </HBox.margin>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
             </Label>
             <Label alignment="CENTER" text="Nom">
                <HBox.margin>
-                  <Insets left="53.0" />
+                  <Insets left="60.0" />
                </HBox.margin>
             </Label>
             <Label alignment="CENTER" text="Prenom">
                <HBox.margin>
-                  <Insets left="58.0" />
+                  <Insets left="60.0" />
                </HBox.margin>
             </Label>
             <Label alignment="CENTER" text="Email">
                <HBox.margin>
-                  <Insets left="50.0" />
+                  <Insets left="60.0" />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" text="Tele">
+            <Label alignment="CENTER" text="Tel">
                <HBox.margin>
-                  <Insets left="104.0" />
+                  <Insets left="60.0" />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" text="Adresse">
+            <Label alignment="CENTER" text="Adres">
                <HBox.margin>
-                  <Insets left="70.0" />
-               </HBox.margin>
-            </Label>
-            <Label alignment="CENTER" layoutX="503.0" layoutY="21.0" text="Suppression">
-               <HBox.margin>
-                  <Insets left="80.0" />
+                  <Insets left="60.0" />
                </HBox.margin>
             </Label>
          </children>
       </HBox>
-      <ScrollPane layoutX="7.0" layoutY="48.0" prefHeight="350.0" prefWidth="768.0" style="-fx-background-insets: 0; -fx-background-color: #fff;">
-         <content>
-            <VBox fx:id="pnItem" prefHeight="342.0" prefWidth="766.0" />
-         </content>
+      <ScrollPane layoutY="48.0" prefHeight="346.0" prefWidth="732.0" style="-fx-background-insets: 0; -fx-background-color: #fff;">
+            <VBox fx:id="pnItem" prefHeight="338.0" prefWidth="722.0" />
       </ScrollPane>
    </children>
 </Pane>

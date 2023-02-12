@@ -3,10 +3,20 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 
-<HBox fx:id="row" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="709.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_item">
+<HBox fx:id="row" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="821.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller_item">
    <children>
+      <ImageView fx:id="img_client" fitHeight="33.0" fitWidth="44.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../../../../Users/Aminub/Desktop/img%20profil/img1.png" />
+         </image>
+         <HBox.margin>
+            <Insets left="20.0" />
+         </HBox.margin>
+      </ImageView>
       <Label fx:id="txt_cin" maxWidth="60.0" minWidth="60.0" text="UC1341">
          <HBox.margin>
             <Insets left="20.0" />
@@ -37,7 +47,7 @@
             <Insets left="20.0" />
          </HBox.margin>
       </Label>
-      <Button fx:id="btn_supp" mnemonicParsing="false" onMouseClicked="#mouse_click" onMouseEntered="#mouse_in" onMouseExited="#mouse_out" style="-fx-border-radius: 15; -fx-border-color: #fff; -fx-background-color: #EBE8F9; -fx-border-color: #ffffff;" text="Supprimer">
+      <Button fx:id="btn_supp" mnemonicParsing="false" onMouseClicked="#mouse_click" onMouseEntered="#mouse_in" onMouseExited="#mouse_out" style="-fx-background-radius: 15; -fx-background-color: #EBE8F9;" text="Supprimer">
          <HBox.margin>
             <Insets left="20.0" />
          </HBox.margin>

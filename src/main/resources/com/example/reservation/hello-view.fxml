@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="1009.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="518.0" prefWidth="947.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservation.controller">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="-1.0" layoutY="-1.0" prefHeight="518.0" prefWidth="217.0" style="-fx-background-color: #EBE8F9;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ImageView fitHeight="91.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="ii" fitHeight="91.0" fitWidth="101.0" pickOnBounds="true" preserveRatio="true">
                <VBox.margin>
                   <Insets bottom="10.0" top="40.0" />
                </VBox.margin>
@@ -106,7 +106,7 @@
             </Button>
          </children>
       </VBox>
-      <Pane fx:id="pnlStatus" layoutX="215.0" layoutY="20.0" prefHeight="73.0" prefWidth="795.0" style="-fx-background-color: #EBE8F9;">
+      <Pane fx:id="pnlStatus" layoutX="217.0" layoutY="20.0" prefHeight="73.0" prefWidth="730.0" style="-fx-background-color: #EBE8F9;">
          <children>
             <Label fx:id="lblStatus" layoutX="21.0" layoutY="14.0" text="Listes Clients">
                <font>
@@ -115,6 +115,6 @@
             </Label>
          </children>
       </Pane>
-      <VBox fx:id="panel" layoutX="217.0" layoutY="93.0" prefHeight="425.0" prefWidth="789.0" />
+      <VBox fx:id="panel" layoutX="217.0" layoutY="93.0" prefHeight="425.0" prefWidth="730.0" />
    </children>
 </AnchorPane>
